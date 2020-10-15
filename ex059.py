@@ -1,4 +1,5 @@
 from time import sleep
+print('=-' * 12, 'CALCULADORA', '-=' * 12)
 v1 = int(input('Digite o primeiro valor: '))
 v2 = int(input('Digite o segundo valor: '))
 print('Qual operação vocẽ quer realizar com os números digitados?')
