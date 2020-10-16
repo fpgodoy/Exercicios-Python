@@ -10,16 +10,21 @@ while repeat == 'S':
     if modo == 'F':
         res = n
         modo = 'FOR'
+        print('O fatorial de {} calculado com a função {} é {} '.format(n, modo, n), end = "")
         for f in range(res - 1, 1, -1):
             res = res * f
+            print('x {} '.format(f), end = "")
+        print('x 1 = {}.'.format(res))
     elif modo == 'W':
         res = n
         cont = res
         modo = 'WHILE'
+        print('O fatorial de {} calculado com a função {} é {} '.format(n, modo, n), end = "")
         while cont > 1:
             cont = cont-1
             res = res * cont
-    print('O fatorial de {} calculado com a função {} é {}.'.format(n, modo, res))
+            print('x {} '.format(cont), end = "")
+        print('= {}.'.format(res))
     repeat = str(input(('Deseja fazer um novo cálculo? [S/N] '))).upper()
     print('---' * 30)
 print('FIM')
