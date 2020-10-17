@@ -1,5 +1,5 @@
 print('=======GERADOR DE SEQUÊNCIA DE FIBONACCI=======')
-n = int(input('Quantos elementos você quer? '))
+n = int(input('Quantos termos você quer exibir? '))
 c = n
 ultimo = 1
 penultimo = 0
