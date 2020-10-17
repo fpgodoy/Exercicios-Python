@@ -1,5 +1,6 @@
 print('Calculadora de progressão aritmética.')
 repeat = ''
+q = 0
 p = int(input('Digite o primeiro termo: '))
 r = int(input('Digite a razão: '))
 while repeat != 0:
@@ -13,7 +14,8 @@ while repeat != 0:
         print('{}{}'.format(p, ', ' if c < repeat else '.'), end = "")
         c += 1
         p += r
+        q += 1
     print('\n', '==='* 30)
     repeat = int(input('Deseja mostrar mais quantos termos? Digite 0 para encerrar. >>>> '))
 print('...'*30)
-print('Programa encerrado.')
+print('Foram mostrados {} termos. Programa encerrado.'.format(q))
