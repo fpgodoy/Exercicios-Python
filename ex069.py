@@ -4,19 +4,18 @@ while True:
     print('CADASTRE UMA PESSOA')
     print('-' * 19)
     idade = int(input('Idade: '))
-    sexo = str(input ('Sexo: [M/F] ')).upper().strip()
-    while sexo != 'M' and sexo != 'F':
-        sexo = str(input ('Sexo: [M/F] ')).upper().strip()
+    sexo = cont = 'a'
+    while sexo not in 'MF':
+        sexo = str(input ('Sexo: [M/F] ')).upper().strip()[0]
     if idade >= 18:
         mais18 += 1
     if sexo == 'M':
         men += 1
-    if sexo == 'F' and idade <20:
+    if sexo == 'F' and idade < 20:
         w20 += 1
     print('-' * 19)
-    cont = str(input('Quer continuar? [S/N] ')).upper().strip()
-    while cont != 'S' and cont != 'N':
-        cont = str(input('Quer continuar? [S/N] ')).upper().strip()
+    while cont not in 'SN':
+        cont = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
     print('-' * 19)
     if cont == 'N':
         break
