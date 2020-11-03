@@ -9,4 +9,5 @@ while True:
     if repeat in 'Nn':
         break
 valores.sort()
+print('-='*30)
 print(f'Os valores digitados foram {valores}.')
