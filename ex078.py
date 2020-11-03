@@ -1,7 +1,7 @@
 valores = list()
 for c in range(0,5):
-    print(f'Digite um valor para a posição {c}', end = '')
-    valores.append(input(': '))
+    valores.append(input(f'Digite um valor para a posição {c}:' ))
+print('-='*30)
 print(f'O maior valor digitado foi {max(valores)}, que aparece nas posições ', end = '')
 for chaveMaior, valorMaior in enumerate(valores):
     if valorMaior == max(valores):
