@@ -1,7 +1,15 @@
 expressao = input('Digite uma expressão matemática com parênteses: ')
-abertos = expressao.count('(')
-fechados = expressao.count(')')
-if abertos == fechados:
-    print('Expressão válida.')
+pilha = []
+for simb in expressao:
+    if simb == '(':
+        pilha.append('(')
+    elif simb == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('Sua expressão é válida.')
 else:
-    print('Expressão inválida.')
+    print('Sua expressão é inválida.')
